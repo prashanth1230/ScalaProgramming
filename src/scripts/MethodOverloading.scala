@@ -4,11 +4,11 @@
 
 def add(a: Int, b: Int): Int = {
   println("Using int version")
-  return a + b
+  a + b
 }
 def add(a: Double, b: Double): Double = {
   println("Using double version")
-  return a + b
+  a + b
 }
 
 println(add(1, 2))
