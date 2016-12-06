@@ -1,16 +1,15 @@
 /**
-  * Created by a487037 on 12/02/2016.
+  * Created by a487037 on 12/06/2016.
   */
 
 import scala.annotation.tailrec
 
-@tailrec
-def fact(n: BigInt, acc: BigInt): BigInt = {
-  if (n == 0 || n == 1) acc
-  else fact(n - 1, acc * n)
-}
-
 def factorial(n: BigInt): BigInt = {
+  @tailrec
+  def fact(n: BigInt, acc: BigInt): BigInt = {
+    if (n == 0 || n == 1) acc
+    else fact(n - 1, acc * n)
+  }
   fact(n, 1)
 }
 
