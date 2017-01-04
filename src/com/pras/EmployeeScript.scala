@@ -15,3 +15,12 @@ println(anotherPrashanth.lastName)
 
 //If the compiled classes are cached, run the command with -nc switch
 //scala -nc com\pras\EmployeeScript.scala
+
+//Demostration of try/catch block
+try {
+  val nik = new Employee("", "D.R")
+} catch {
+  case e:IllegalArgumentException => println(e.getMessage)
+} finally {
+  println("Continuing with the program")
+}
