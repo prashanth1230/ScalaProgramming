@@ -1,4 +1,4 @@
-import com.pras.Employee
+import com.pras.{Department, Employee, Manager}
 
 /**
   * Created by Prashanth Udupa on 04-01-2017.
@@ -24,3 +24,7 @@ try {
 } finally {
   println("Continuing with the program")
 }
+
+val manager = new Manager("Alan", "Turing", new Department("Mathematics"), List(prashanth, newPrashanth))
+println(manager.fullName)
+manager.reportees.foreach(e => println(e.fullName))
