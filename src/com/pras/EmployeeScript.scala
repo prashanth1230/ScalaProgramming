@@ -10,5 +10,8 @@ println(prashanth.firstName)
 val newPrashanth = prashanth.changeLastName("Manjunath")
 println(newPrashanth.lastName)
 
+val anotherPrashanth = newPrashanth.copy(argLastName = "Udupa")
+println(anotherPrashanth.lastName)
+
 //If the compiled classes are cached, run the command with -nc switch
 //scala -nc com\pras\EmployeeScript.scala

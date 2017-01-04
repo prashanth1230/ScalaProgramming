@@ -14,6 +14,9 @@ class Employee(val firstName: String, val lastName: String, val department: Depa
   //Create a mutator method to change the last name. Note that it does not change the value, but creates a copy
   //The class is still immutable
   def changeLastName(argLastName: String) = new Employee(firstName, argLastName, department)
+
+  //Creating a copy constructor
+  def copy(argFirstName: String = firstName, argLastName: String = lastName, argDepartment: Department = department) = new Employee(argFirstName, argLastName, argDepartment)
 }
 
 class Department(val name: String)
