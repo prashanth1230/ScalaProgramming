@@ -20,7 +20,7 @@ println(anotherPrashanth.lastName)
 try {
   val nik = new Employee("", "D.R")
 } catch {
-  case e:IllegalArgumentException => println(e.getMessage)
+  case e: IllegalArgumentException => println(e.getMessage)
 } finally {
   println("Continuing with the program")
 }
