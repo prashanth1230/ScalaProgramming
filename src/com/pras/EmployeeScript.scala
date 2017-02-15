@@ -28,3 +28,29 @@ try {
 val manager = new Manager("Alan", "Turing", new Department("Mathematics"), List(prashanth, newPrashanth))
 println(manager.fullName)
 manager.reportees.foreach(e => println(e.fullName))
+
+val prashanth2 = new Employee("Prashanth", "Udupa")
+println(prashanth.equals(prashanth2))
+//We have overridden the == method too just be overriding the equals method
+println(prashanth == prashanth2)
+//The reference equality is checked below
+println(prashanth eq prashanth2)
+
+//Checking the case classes
+val toys = new Department("Toys")
+println(toys)
+//Case classes create a toString, equals and hashCode methods automatically
+val toys2 = new Department("Toys")
+println(toys == toys2)
+println(toys eq toys2)
+
+//Case classess also create a copy method automatically
+val toys3 = toys.copy()
+println(toys3)
+
+val hardware = toys.copy(name = "Hardware")
+println(hardware)
+
+//Case classes make "new" keyword optional
+val hardware2 = Department("Hardware")
+println(hardware2)

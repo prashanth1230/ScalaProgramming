@@ -27,6 +27,13 @@ class Employee(val firstName: String, val lastName: String, val department: Depa
 
   //Creating a copy constructor
   def copy(argFirstName: String = firstName, argLastName: String = lastName, argDepartment: Department = department) = new Employee(argFirstName, argLastName, argDepartment)
+
+  override def equals(x: Any): Boolean = {
+    if (!x.isInstanceOf[Employee]) false
+    val other = x.asInstanceOf[Employee]
+    other.firstName.equals(this.firstName) &&
+    other.lastName.equals(this.lastName)
+  }
 }
 
-class Department(val name: String)
+case class Department(val name: String)
